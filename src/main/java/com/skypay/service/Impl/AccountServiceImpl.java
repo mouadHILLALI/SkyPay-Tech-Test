@@ -3,6 +3,7 @@ package com.skypay.service.Impl;
 import java.time.LocalDate;
 import java.util.List;
 
+import com.skypay.exception.customExceptions.InvalidDepositAmountException;
 import com.skypay.model.Account;
 import com.skypay.model.Transaction;
 import com.skypay.service.AccountService;
@@ -20,7 +21,7 @@ public class AccountServiceImpl implements AccountService {
             account.setBalance(newBalance);
             account.setTransactions(this.addTransactions(new Transaction(LocalDate.now() , amount)));
         } catch (Exception e) {
-            
+            throw InvalidDepositAmountException("invalid deposit amount");
         }
     }
 
