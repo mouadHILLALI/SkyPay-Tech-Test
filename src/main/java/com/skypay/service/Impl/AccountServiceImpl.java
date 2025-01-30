@@ -16,15 +16,19 @@ public class AccountServiceImpl implements AccountService {
     private final Account account;
     
     public void deposit(int amount) throws InvalidDepositAmountException{
-        if (amount<=0) {
-            throw new InvalidDepositAmountException("invalid amount to deposit");
-        }
+        validateDepositAmount(amount);
         try {
             int newBalance = account.getBalance() + amount;
             account.setBalance(newBalance);
-            this.addTransaction(new Transaction(LocalDate.now() , amount));
+            this.addTransaction(new Transaction(LocalDate.now() , amount, newBalance));
         } catch (Exception e) {
-            throw new InvalidDepositAmountException("invalid deposit amount");
+            throw new InvalidDepositAmountException("Failed to process deposit: " + e.getMessage());
+        }
+    }
+
+    private void validateDepositAmount(int amount) throws InvalidDepositAmountException {
+        if (amount <= 0) {
+            throw new InvalidDepositAmountException("Deposit amount must be positive. Provided: " + amount);
         }
     }
 

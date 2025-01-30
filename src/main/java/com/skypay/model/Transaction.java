@@ -10,4 +10,5 @@ import lombok.RequiredArgsConstructor;
 public class Transaction {
     private final LocalDate date;
     private final int amount;
+    private final int newBalance;
 }
