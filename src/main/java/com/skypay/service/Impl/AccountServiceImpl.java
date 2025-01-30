@@ -33,7 +33,7 @@ public class AccountServiceImpl implements AccountService {
     }
     
     public List<Transaction> addTransactions(Transaction transaction){
-            List<Transaction> transactions = account.getTransactions().add(transaction);
-            return transactions;
+            List<Transaction> transactions = account.getTransactions();
+            return transactions.add(transaction);
     }
 }
