@@ -15,13 +15,13 @@ public class AccountServiceImpl implements AccountService {
 
     private final Account account;
     
-    public void deposit(int amount){
+    public void deposit(int amount) throws InvalidDepositAmountException{
         try {
             int newBalance = account.getBalance() + amount;
             account.setBalance(newBalance);
-            account.setTransactions(this.addTransactions(new Transaction(LocalDate.now() , amount)));
+            this.addTransaction(new Transaction(LocalDate.now() , amount));
         } catch (Exception e) {
-            throw InvalidDepositAmountException("invalid deposit amount");
+            throw new InvalidDepositAmountException("invalid deposit amount");
         }
     }
 
@@ -33,8 +33,8 @@ public class AccountServiceImpl implements AccountService {
 
     }
     
-    public List<Transaction> addTransactions(Transaction transaction){
+    public void addTransaction(Transaction transaction){
             List<Transaction> transactions = account.getTransactions();
-            return transactions.add(transaction);
+            transactions.add(transaction);
     }
 }

@@ -1,15 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: AccountServiceTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.090 s <<< FAILURE! -- in AccountServiceTest
-AccountServiceTest.deposit -- Time elapsed: 0.039 s <<< ERROR!
-java.lang.Error: 
-Unresolved compilation problems: 
-	The method printStatement() is undefined for the type AccountService
-	The method assertEquals(short, short) in the type Assertions is not applicable for the arguments (String)
-
-	at AccountServiceTest.deposit(AccountServiceTest.java:12)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.240 s -- in AccountServiceTest

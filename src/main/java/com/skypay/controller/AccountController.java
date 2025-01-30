@@ -2,7 +2,6 @@ package com.skypay.controller;
 
 import java.util.Scanner;
 
-import com.skypay.dto.request.DepositReqDto;
 import com.skypay.service.AccountService;
 
 import lombok.RequiredArgsConstructor;
@@ -14,7 +13,8 @@ public class AccountController {
 
  public void deposit(){
     System.out.println("Enter the amount you wish to deposit:\n");
-    int amount = scanner.nextLine();
+    int amount = scanner.nextInt();
     accountService.deposit(amount);
+    System.out.println("the amount was deposited "+amount+ " successfully:\n");
  }
 }
