@@ -16,7 +16,8 @@ public class AccountServiceImpl implements AccountService {
     
     public void deposit(int amount){
         try {
-            account.setBalance(amount);
+            int newBalance = account.getBalance() + amount;
+            account.setBalance(newBalance);
             account.setTransactions(this.addTransactions(new Transaction(LocalDate.now() , amount)));
         } catch (Exception e) {
             
@@ -32,11 +33,7 @@ public class AccountServiceImpl implements AccountService {
     }
     
     public List<Transaction> addTransactions(Transaction transaction){
-        try {
             List<Transaction> transactions = account.getTransactions().add(transaction);
             return transactions;
-        } catch (Exception e) {
-            System.err.println(e);
-        }
     }
 }
