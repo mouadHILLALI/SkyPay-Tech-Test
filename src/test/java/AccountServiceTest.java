@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
-import com.skypay.service.AccountService;
+
+import com.skypay.service.Impl.AccountService;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

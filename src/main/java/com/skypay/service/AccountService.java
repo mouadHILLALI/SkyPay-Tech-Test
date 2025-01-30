@@ -1,8 +1,7 @@
 package com.skypay.service;
 
-public class AccountService {
-    
-    public void deposit(){
-        
-    }
+public interface AccountService {
+    void deposit(int amount);
+    void withdraw(int amount);
+    void printStatement();
 }
