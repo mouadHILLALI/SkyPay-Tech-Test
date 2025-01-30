@@ -17,7 +17,7 @@ public class AccountServiceImpl implements AccountService {
     
     public void deposit(int amount) throws InvalidDepositAmountException{
         if (amount<=0) {
-            
+            throw new InvalidDepositAmountException("invalid amount to deposit");
         }
         try {
             int newBalance = account.getBalance() + amount;
