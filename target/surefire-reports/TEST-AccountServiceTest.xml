@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="AccountServiceTest" time="1.053" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="AccountServiceTest" time="1.068" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\MD\AppData\Local\Temp\surefire3252589527226145154\surefirebooter-20250131014650335_3.jar C:\Users\MD\AppData\Local\Temp\surefire3252589527226145154 2025-01-31T01-46-50_196-jvmRun1 surefire-20250131014650335_1tmp surefire_0-20250131014650335_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\MD\AppData\Local\Temp\surefire1977098047681234411\surefirebooter-20250131020951072_3.jar C:\Users\MD\AppData\Local\Temp\surefire1977098047681234411 2025-01-31T02-09-50_914-jvmRun1 surefire-20250131020951072_1tmp surefire_0-20250131020951072_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\MD\Desktop\SkyPay-Tech-Test\target\test-classes;C:\Users\MD\Desktop\SkyPay-Tech-Test\target\classes;C:\Users\MD\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\MD\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\MD\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\MD\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\MD\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\MD\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\MD\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;C:\Users\MD\.m2\repository\org\mockito\mockito-core\5.5.0\mockito-core-5.5.0.jar;C:\Users\MD\.m2\repository\net\bytebuddy\byte-buddy\1.14.6\byte-buddy-1.14.6.jar;C:\Users\MD\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.6\byte-buddy-agent-1.14.6.jar;C:\Users\MD\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\MD\AppData\Local\Temp\surefire3252589527226145154\surefirebooter-20250131014650335_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\MD\AppData\Local\Temp\surefire1977098047681234411\surefirebooter-20250131020951072_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.4+8-LTS-274"/>
@@ -58,15 +58,15 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="withdrawFailShouldThrowInvalidWithdrawAmountException" classname="AccountServiceTest" time="0.986">
+  <testcase name="withdrawFailShouldThrowInvalidWithdrawAmountException" classname="AccountServiceTest" time="0.998">
     <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\MD\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.6\byte-buddy-agent-1.14.6.jar)
 WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
 WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
 WARNING: Dynamic loading of agents will be disallowed by default in a future release
 ]]></system-err>
   </testcase>
-  <testcase name="testPrintStatement" classname="AccountServiceTest" time="0.008"/>
-  <testcase name="depositSuccess" classname="AccountServiceTest" time="0.009"/>
+  <testcase name="testPrintStatement" classname="AccountServiceTest" time="0.011"/>
+  <testcase name="depositSuccess" classname="AccountServiceTest" time="0.01"/>
   <testcase name="withdrawSuccess" classname="AccountServiceTest" time="0.003"/>
   <testcase name="depositFailShouldThrow" classname="AccountServiceTest" time="0.003"/>
   <testcase name="withdrawFailShouldThrowInsufficientBalance" classname="AccountServiceTest" time="0.003"/>

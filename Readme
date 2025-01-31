@@ -1,0 +1,96 @@
+Skypay Banking System
+
+📌 Project Overview
+
+Skypay is a simple banking system that allows users to manage their bank accounts by performing operations such as depositing, withdrawing, and viewing their transaction history. The system follows an Object-Oriented Programming (OOP) approach with Java and uses Lombok for reducing boilerplate code.
+
+🛠️ Tech Stack
+
+Java (JDK 17+)
+
+Lombok (for reducing boilerplate code)
+
+Maven (for dependency management)
+
+🚀 Features
+
+Deposit money into an account 💰
+
+Withdraw money from an account 🏦
+
+View transaction history 📄
+
+Display an interactive menu for user actions 🎛️
+
+Exception handling for invalid transactions ❌
+
+📂 Project Structure
+
+Skypay
+│── src
+│   ├── main
+│   │   ├── java
+│   │   │   ├── com.skypay
+│   │   │   │   ├── controller      # Handles user interactions
+│   │   │   │   ├── model           # Contains domain models (Account, Transaction)
+│   │   │   │   ├── service         # Defines business logic
+│   │   │   │   ├── service.impl    # Implements service logic
+│   │   │   │   ├── exception       # Custom exception handling
+│   │   │   ├── Main.java           # Entry point of the application
+│   ├── test                        # Unit tests (if implemented)
+
+🔧 Installation & Setup
+
+Prerequisites
+
+Install Java 8+
+
+Install Maven
+
+Steps to Run the Project
+
+Clone the repository:
+
+git clone https://github.com/mouadHILLALI/SkyPay-Tech-Test
+
+Navigate to the project directory:
+
+cd skypay
+
+Compile and run the project:
+
+mvn clean compile
+mvn package
+java -jar target/demo-1.0-SNAPSHOT.jar
+
+📖 How to Use
+
+Run the application.
+
+Choose an operation from the menu:
+
+1. Deposit: Enter an amount to deposit into your account.
+
+2. Withdraw: Enter an amount to withdraw (if sufficient balance is available).
+
+3. Print Statement: View all past transactions.
+
+4. Exit: Close the application.
+
+⚠️ Exception Handling
+
+The system handles the following exceptions:
+
+InvalidDepositAmountException: When a user tries to deposit a negative or zero amount.
+
+InvalidWithdrawAmountException: When a user tries to withdraw a negative or zero amount.
+
+InsufficientBalanceException: When a user attempts to withdraw more than the available balance.
+
+📬 Contact
+
+For inquiries, reach out via:
+
+📧 Email: mauadtoto001@gmail.com
+
+
