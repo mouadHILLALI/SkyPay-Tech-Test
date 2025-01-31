@@ -12,6 +12,6 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Account account = new Account(); 
         AccountService accountService = new AccountServiceImpl(account); 
-        new AccountController(accountService , scanner).deposit();
+        new AccountController(accountService , scanner).startMenu();
     }
 }
