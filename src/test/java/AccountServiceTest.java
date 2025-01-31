@@ -33,4 +33,13 @@ public class AccountServiceTest {
         verify(mockAccount, never()).setBalance(anyInt());
     }
 
+    @Test
+    public void withdrawSuccess(){
+        Account mockAccount = mock(Account.class);
+        AccountServiceImpl accountService = new AccountServiceImpl(mockAccount);
+        when(mockAccount.getBalance()).thenReturn(500); 
+        accountService.withdraw(300); 
+        verify(mockAccount).setBalance(200);
+    }
+
 }
