@@ -3,7 +3,10 @@ package com.skypay.service.Impl;
 import java.time.LocalDate;
 import java.util.List;
 
+
 import com.skypay.exception.customExceptions.InvalidDepositAmountException;
+import com.skypay.exception.customExceptions.InvalidWithdrawAmountException;
+import com.skypay.exception.customExceptions.InsufficientBalanceException;
 import com.skypay.model.Account;
 import com.skypay.model.Transaction;
 import com.skypay.service.AccountService;
@@ -32,8 +35,20 @@ public class AccountServiceImpl implements AccountService {
         }
     }
 
-    public void withdraw(int amount){
-
+    private void validateWithdrawAmount(int amount) throws InvalidWithdrawAmountException {
+        if (amount <= 0) {
+            throw new InvalidWithdrawAmountException("Deposit amount must be positive. Provided: " + amount);
+        }
+    }
+    
+    public void withdraw(int amount) throws InvalidWithdrawAmountException, InsufficientBalanceException{
+        validateWithdrawAmount(amount);
+        if (amount>account.getBalance()) {
+            throw new InsufficientBalanceException("Insufficient Balance, Current Balance: " + account.getBalance());
+        }
+        int newBalance = account.getBalance() - amount;
+        account.setBalance(newBalance);
+        addTransaction(new Transaction(LocalDate.now(), -amount, newBalance));
     }
 
     public void printStatement(){
