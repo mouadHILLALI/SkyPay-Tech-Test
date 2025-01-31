@@ -51,8 +51,21 @@ public class AccountServiceImpl implements AccountService {
         addTransaction(new Transaction(LocalDate.now(), -amount, newBalance));
     }
 
-    public void printStatement(){
-
+    public void printStatement() {
+        StringBuilder statement = new StringBuilder();
+    
+        statement.append("Date || Amount || Balance\n");
+    
+        for (Transaction transaction : account.getTransactions()) {
+            statement.append(transaction.getDate())
+                    .append(" || ")
+                    .append(transaction.getAmount())
+                    .append(" || ")
+                    .append(transaction.getNewBalance())
+                    .append("\n");
+        }
+    
+        System.out.println(statement.toString());
     }
     
     public void addTransaction(Transaction transaction){
