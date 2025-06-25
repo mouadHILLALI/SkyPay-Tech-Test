@@ -11,13 +11,14 @@ import com.skypay.model.Account;
 import com.skypay.model.Transaction;
 import com.skypay.service.AccountService;
 
-import lombok.RequiredArgsConstructor;
 
-@RequiredArgsConstructor
 public class AccountServiceImpl implements AccountService {
 
-    private final Account account;
+    private Account account;
     
+    public AccountServiceImpl(Account account){
+        this.account = account;
+    }
     public void deposit(int amount) throws InvalidDepositAmountException{
         validateDepositAmount(amount);
         try {

@@ -5,12 +5,15 @@ import java.util.Scanner;
 import com.skypay.service.AccountService;
 import com.skypay.exception.customExceptions.*;
 
-import lombok.RequiredArgsConstructor;
 
-@RequiredArgsConstructor
 public class AccountController {
     private final AccountService accountService;
     private final Scanner scanner;
+
+    public AccountController(AccountService accountService , Scanner scanner){
+        this.accountService = accountService;
+        this.scanner = scanner;
+    }
 
     public void startMenu() {
         while (true) {
